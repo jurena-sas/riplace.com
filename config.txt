@@ -1,0 +1,28 @@
+// INSTALL DEPENDENCIES //
+
+npx create-next-app@latest . --ts --src-dir
+
+// PRISMA (DB) (Incompatible avec offre mutualisee)
+
+npm install -D prisma
+npm install @prisma/client
+
+-- Desinstaller -----
+
+npm uninstall prisma @prisma/client
+
+// AUDIT PRISMA /////
+
+npm list prisma @prisma/client
+npm audit
+command -v nvm
+
+// .ENV //////////////////////////
+
+touch .env
+chmod 600 .env
+
+// REPRENDRE LE PROJET AILLEUR
+
+npm ci
+npm run dev
